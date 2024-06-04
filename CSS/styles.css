@@ -1,0 +1,82 @@
+/* CSS reset */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS reset */
+
+
+
+/* General Classes */
+
+.martop{
+    margin-top: 100px; 
+}
+
+/* End of General Classes */
+
+
+
+/* CSS var */
+ 
+    :root{
+        --primary-color:#e9ecef;
+        --secondary-color:#333333;       
+        --accent-color:#28a745;
+    }
+
+/* End of CSS var */
+
+
+
+/* Navbar */
+
+.logo{
+    color: #FFFFFF;
+    font-size: 22px;
+}
+.navbar{
+    background-color: var(--secondary-color);
+}
+
+/* End of Navbar */
+
+
+
+/* Cards */
+
+.card-structure{
+    margin-top: 100px;
+}
+
+/* End of Cards */
+
+
+
+/* Add product form */
+
+.custom-container{
+    width: 80%;
+    margin: 100px auto;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Bootstrap in-built class */
+
+.form-check-input:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.form-check-input:focus {
+    border-color: var(--accent-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(27 253 13 / 25%);
+}
+
+/* End of Bootstrap in-built class */
+
+/* End of Add product form */
