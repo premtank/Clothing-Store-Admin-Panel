@@ -1,6 +1,6 @@
 <?php
 
-
+require("connectDB.php");
 //1) Create database fashion store
 
 // $sql = "CREATE DATABASE FashionStore";
@@ -176,12 +176,11 @@
 //                                description TEXT NOT NULL,
 //                                imagepath VARCHAR(20) NOT NULL,
 //                                color VARCHAR(10),
-//                                fit INT(4) NOT NULL,
-//                                fabric INT(4) NOT NULL,
-//                                occassion INT(4) NOT NULL,
-//                                washcare VARCHAR(20) NOT NULL,
-//                                category_id INT(4) UNSIGNED,
-//                                FOREIGN KEY (category_id) REFERENCES Category(category_id))";
+//                                fit VARCHAR(10) NOT NULL,
+//                                fabric VARCHAR(10) NOT NULL,
+//                                occassion VARCHAR(10) NOT NULL,
+//                                washcare VARCHAR(10) NOT NULL,
+//                                category VARCHAR(10) NOT NULL)";
 
 // if($con->query($sql) === TRUE){
 //     echo "Product table created.";
@@ -193,13 +192,45 @@
 
 //Deleting data
 
-$sql="DELETE FROM Category WHERE category_id=7";
+// $sql="DELETE FROM Category WHERE category_id=7";
+// if($con->query($sql) === TRUE){
+//     echo "Data Deleted Successfully.";
+// }
+// else{
+//     echo "Error! Deleting Data.";
+// }
+
+// $sql="SELECT * FROM Category";
+// $result=$con->query($sql);
+// print_r($result);
+
+// $sql="ALTER TABLE Product
+// RENAME COLUMN category TO category_id";
+
+// $sql="ALTER TABLE Product
+// MODIFY COLUMN occassion VARCHAR(20)";
+
+// $sql="ALTER TABLE Product
+// DROP FOREIGN KEY FK_category_id";
+
+// $sql="ALTER TABLE Product
+// DROP COLUMN category_id";
+
+// $sql="DROP TABLE Product
+// ";
+
+// $sql="ALTER TABLE Product
+// ADD COLUMN pattern VARCHAR(20)";
+$username="gungunudhani";
+$data="0306Admin@01";
+$password=password_hash($data,PASSWORD_DEFAULT);
+
+$sql="INSERT INTO User(name,password) VALUES('".$username."','".$password."');";
+
 if($con->query($sql) === TRUE){
-    echo "Data Deleted Successfully.";
+    echo "User inserted Successfully.";
 }
 else{
-    echo "Error! Deleting Data.";
+    echo "Error! inserting user.";
 }
-
-
 ?>

@@ -48,17 +48,17 @@
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
 
     <main class="form-signin w-100 m-auto">
-        <form action="#">
+        <form action="verifyPass.php" method="post">
             <h1 class="h3 mb-3 fw-normal">Please Login</h1>
 
             <div class="form-floating">
-                <label for="floatingInput">Email address</label>
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <span class="design invalidfeedback">Please enter the valid email address</span>
+                <label for="floatingInput">Username</label>
+                <input type="text" name="username" class="form-control" id="floatingInput" placeholder="admin1234">
+                <span class="design invalidfeedback">Please enter the valid username</span>
             </div>
             <div class="form-floating">
                 <label for="floatingPassword">Password</label>
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <span class="design invalidfeedback">Please enter valid password</span>
             </div>
 
@@ -67,6 +67,7 @@
     </main>
 
 </body>
+
 <script>
 
     let login = document.querySelector("submit");
@@ -122,8 +123,8 @@
             }
             else {
                 nexttag.style.display = "none";
+           
             }
-
         });
     })
 
